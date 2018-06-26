@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form and datalist</title>
+</head>
+<body>
+<body>
+	<form>
+		<div>
+		<input type="text" name="username" placeholder="username">
+		<input type="password" name="password" placeholder="password">
+		<button>Submit</button>
+		</div>
+		<div>
+			Favorite color ?
+			<input type="radio" name="color" value="red">Red
+			<input type="radio" name="color" value="blue">Blue
+			<input type="radio" name="color" value="green">Green
+			<input type="radio" name="color" value="yellow">Yellow
+		</div>
+		<div>
+			<input name="country" list="country" placeholder="country">
+				<datalist id="country">
+					<option value="India"></option>
+					<option value="Indonesia"></option>
+					<option value="Japan"></option>
+					<option value="US"></option>
+					<option value="UK"></option>
+					<option value="UAE"></option>
+					<option value="Tokyo"></option>
+					<option value="Australia"></option>
+					<option value="Singapore"></option>
+					<option value="Denmark"></option>
+				</datalist>
+		</div>
+	</form>
+</body>
+</html>
