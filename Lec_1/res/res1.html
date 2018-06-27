@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Css Content based on screens</title>
+	<style type="text/css">
+		@media (min-width: 500px){
+			h1::before{
+				content: "Hello this is lenthy title"
+			}
+		}
+		@media (max-width: 499px){
+			h1::before{
+				content: "Hello"
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1></h1>
+</body>
+</html>

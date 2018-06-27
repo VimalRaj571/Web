@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Immediate child</title>
+	<style>
+		ol > li {
+			color: red;
+			/*Immediate chile in the ol */
+		}
+	</style>
+</head>
+<body>
+	<ol>
+		<li>One</li>
+		<li>Two</li>
+		<li>Three</li>
+			<ul>
+				<li>One</li>
+				<li>Two</li>
+				<li>Three</li>
+			</ul>
+		<li>Four</li>
+		<li>Five</li>
+	</ol>
+</body>
+</html>
