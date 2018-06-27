@@ -1,0 +1,19 @@
+.success, .warning, .error {
+  font-family: Arial;
+  font-size: 15px;
+  padding: 10px;
+  border: 1px solid black;
+  margin: 10 px;
+  width: 200px;
+  text-align: center; }
+
+.success {
+  background-color: springgreen; }
+
+.warning {
+  background: red; }
+
+.error {
+  background: yellow; }
+
+/*# sourceMappingURL=inheri.css.map */
