@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>More</title>
+</head>
+<body>
+	
+	{% extends "layout.html" %}
+
+	{% block heading %} 
+		Second Page
+	{% endblock %}
+
+	{% block body %}
+
+	<p>This is index</p>
+	<a href="{{url_for('index')}}">Index</a>
+
+	{% endblock %}
+
+</body>
+</html>

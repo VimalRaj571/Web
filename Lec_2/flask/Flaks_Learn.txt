@@ -1,0 +1,37 @@
+import flask form Flask , render_template
+
+dir structure for template
+
+./
+app.py
+/templates
+	-index.html
+
+
+{{ variable }}
+
+get variable from app.py
+
+render_template("some.html",variable=variable_value)
+
+flask run --no-reload (It watch and reload the server for edit and changes)
+
+$ export FLASK_APP=my_application (Like name of file in dir app.py (Here my_application))
+$ export FLASK_ENV=development
+$ flask run
+
+Jinja is like
+
+{% someblocks %}  #It is valid
+
+{ % someblock % } #It is unvalid
+
+{% endsomeblock %}#It is valid
+
+{% block name %}
+
+{%blockname%}	  #It invalid
+
+{{url_for('more')}} #It is valid
+
+{{ url_for("more")}} #It is invalid

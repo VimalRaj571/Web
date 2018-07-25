@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% extends "layout.html" %}
+
+	{% block title %}
+		This is Index
+	{% endblock %}
+
+	{% block body %}
+
+	<!-- <a href="">More</a> -->
+	<form action="{{ url_for('hello')}}" method="post"> <!--  #If method is get the data is getting through url -->
+		<input type="text" name="name" placeholder="Enter the name"> <!-- name -->
+		<button>Sxubmit</button>
+	</form>
+
+	{% endblock %}
+</body>
+</html>
