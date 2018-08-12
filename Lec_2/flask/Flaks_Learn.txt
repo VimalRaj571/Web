@@ -35,3 +35,5 @@ Jinja is like
 {{url_for('more')}} #It is valid
 
 {{ url_for("more")}} #It is invalid
+
+try pip more over also try easy_install (It will help)

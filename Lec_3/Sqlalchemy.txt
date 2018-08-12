@@ -1,0 +1,17 @@
+#Sqlalchemy
+
+
+from sqlalchemy import
+create_engine
+
+from sqlalchemy.orm
+scoped_session
+sessionmaker
+
+engine = create_engine('URL')
+db = scoped_session(sessionmaker(bind = engine))
+
+db.execute('Query').fetchall()
+
+store it on variable and make fun
+

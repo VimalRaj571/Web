@@ -1,0 +1,11 @@
+from flask import Flask
+
+apppy = Flask(__name__)
+
+@apppy.route("/")
+def Slash():
+	return "/"
+
+@apppy.route("/<string:name>")  #String(Type) name(variable)
+def Greet(name):
+	return "Hey {}".format(name)

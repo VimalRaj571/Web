@@ -1,0 +1,11 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+app.route("/")
+def Hello():
+	return "This is app 2"
+
+app.route("/Hey")
+def Hey():
+	return "Hey!!"	
