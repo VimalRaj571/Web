@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color 1</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',function(){	
+			document.querySelectorAll(".color-change").forEach(function(button) {	
+				// Select All color-change class 
+
+				// ** forEach (passing funtion with arg of button)
+
+				// forEach button selected cheange the style in the h1 element to do
+				button.onclick = function() {
+					document.querySelector("#hello").style.color = button.dataset.color;
+					// dataset.color will give the color name and thing name
+				};
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1 id="hello">Hiii</h1>
+	<button class="color-change" data-color="red">Red</button>			<!-- data-color -->
+	<button class="color-change" data-color="blue">Blue</button>
+	<button class="color-change" data-color="green">Green</button>
+</body>
+</html>

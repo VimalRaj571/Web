@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>counter1</title>
+	<script type="text/javascript">
+		let counter = 0;
+		function count() {
+			counter++;
+			document.querySelector('#counter').innerHTML = counter;
+			if (counter === 10) {
+				alert(`The counter Value is ${counter}`)
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1 id='counter'>0</h1>
+	<button onclick="count()">Click Here</button>
+</body>
+</html>

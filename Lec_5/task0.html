@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tasks</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',()=>{
+			document.querySelector('#new-task').onsubmit = () =>{
+				
+				//create new item for list
+				//console.log(li)
+				const li = document.createElement('li');
+				console.log(li)
+				li.innerHTML = document.querySelector('#task').value;
+				
+				//add a new item to the task list
+				console.log(li)
+				document.querySelector('#tasks').append(li)
+
+				// clear input field
+				console.log(li,document.querySelector("#tasks").value)
+				document.querySelector("#tasks").value = '';
+				console.log(li,document.querySelector("#tasks").value)
+
+				// stop form for submitting
+				return false;
+			}
+		})
+	</script>
+</head>
+<body>
+	<h1>Tasks</h1>
+	<ul id="tasks">
+	</ul>
+	<form id="new-task">
+		<input type="text" id="task">
+		<input id="submit">
+	</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>colors</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',function(){
+
+			document.querySelector('#red').onclick = function () {
+				document.querySelector("#name").style.color = 'red';	
+			};
+
+			document.querySelector('#Blue').onclick = function () {
+				document.querySelector('#name').style.color = 'blue';
+			};
+
+			document.querySelector('#Green').onclick = function () {
+				document.querySelector("#name").style.color = 'green';	
+			}
+
+		})
+	</script>
+</head>
+<body>
+	<h1 id='name'>Hiii</h1>
+	<button id="red">Red</button>
+	<button id="Blue">Blue</button>
+	<button id="Green">Green</button>
+</body>
+</html>

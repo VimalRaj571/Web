@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Detail</th>
+	      <th scope="col">Value</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr>
+	      <td>ISBN</td>
+	      <td>{{ book.isbn }}</td>
+	    </tr>
+	    <tr>
+	    <td>Bookname</td>
+	    <td>{{ book.title }}</td>
+		  </tr>
+		  <tr>
+		    <td>author</td>
+		    <td>{{ book.author }}</td>
+		  </tr>
+		  <tr>
+		    <td>year</td>
+		    <td>{{ book.year }}</td>
+		  </tr>
+		  <tr>
+		    <td>Review Count</td>
+		    <td>{{ avg }}</td>
+		  </tr>
+		  <tr>
+		    <td>Avg score</td>
+		    <td>{{ count }}</td>
+		  </tr>
+	  </tbody>
+	</table>
+
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">Username</th>
+	      <th scope="col">Review</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    {% for key,value in user_rev.items() %}
+	    <tr>
+	      <th>{{ key }}</th>
+	      <td>{{ value }}</td>
+	    </tr>
+	    {% endfor %}
+	  </tbody>
+	</table>
+	<form action="{{ url_for('addreview') }}" method="post">
+	<div class="form-group">
+      <label>Bookid</label>
+      <input name="bookid" class="form-control" placeholder="Enter username" value="{{ book.isbn }}">
+    </div>
+	<div class="form-group">
+      <label>Enter Username</label>
+      <input name="name" class="form-control" placeholder="Enter username">
+    </div>
+	<div class="form-group">
+      <label>Enter Rating</label>
+      <input name="rate" class="form-control" placeholder="Rate btw 0 to 5">
+    </div>
+ 	<div class="form-group">
+    	<label for="exampleTextarea">Example textarea</label>
+    	<textarea name="review" class="form-control" id="exampleTextarea" rows="3"></textarea>
+  	</div>
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  	</form>
+  	<hr>
+{% endblock %}

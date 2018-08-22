@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taks 3</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',() => {
+			// Disable the input box
+			document.querySelector('#submit').disabled = true;
+
+			// Function one check the input length
+			// Enable when the any key is pressed
+			document.querySelector('#task').onkeyup = () => {
+				// document.querySelector('#submit').disabled = false;
+				// Check the field is empty or not
+				if (document.querySelector('#task').value.length > 0) 
+					document.querySelector('#submit').disabled = false;
+				else
+					document.querySelector('#submit').disabled = true;
+			};
+
+			// Function 2 to submit,render on ul,non reload
+			// Create on submit function
+			document.querySelector('#new-task').onsubmit = () => {
+
+
+				// Create the li element to add on the <ul></ul>
+				const li = document.createElement('li')
+
+				// <li>value user type</li>
+				li.innerHTML = document.querySelector('#task').value;
+
+				document.querySelector('#tasks').append(li);
+
+				// Remove the value from the task ()
+				document.querySelector('#task').value = ''
+				document.querySelector('#submit').disabled = true;
+				
+				// Disable the reloading form submit
+				return false;
+			};
+		});
+	</script>
+</head>
+<body>
+	<h1>Tasks</h1>
+	<ul id="tasks"></ul>
+	<form id="new-task">
+		<input type="text" id="task">
+		<input type="submit" id="submit">
+	</form>
+</body>
+</html>

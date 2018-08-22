@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LocalStorage</title>
+	<script type="text/javascript">
+		
+		// Setting counter variable to 0 at first
+		if(!localStorage.getItem('counter'))
+		localStorage.setItem('counter',0);
+
+		document.addEventListener("DOMContentLoaded",() => {
+			document.querySelector('#counter').innerHTML = localStorage.getItem('counter');
+
+			document.querySelector('button').onclick = () => {
+				let counter = localStorage.getItem('counter');
+				counter++;
+				// Update counter
+
+				document.querySelector('#counter').innerHTML = counter;
+				localStorage.setItem('counter',counter);
+			}
+			
+		})
+	</script>
+</head>
+<body>
+	<h1 id="counter"></h1>
+	<button>Submit</button>
+</body>
+</html>

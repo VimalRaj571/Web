@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ES6</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',() => {
+			document.querySelectorAll('.color-change').forEach(button =>  {
+									//Class must select as .color (*.* and *#* are important)
+				button.onclick = () => {
+					document.querySelector('#hello').style.color = button.dataset.color;
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<h1 id="hello">Hiiii</h1>
+	<button class="color-change" data-color="red">Red</button>			<!-- data-color -->
+	<button class="color-change" data-color="blue">Blue</button>
+	<button class="color-change" data-color="green">Green</button>
+</body>
+</html>

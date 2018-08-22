@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block body %}
+	<h1>Book Details</h1>
+	<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>ISBN</th>
+      <th>Book Name</th>
+      <th>Author</th>
+      <th>Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">{{ detail.title }}</th>
+      <td>{{ detail.isbn }}</td>
+      <td>{{ detail.author }}</td>
+      <td>{{ detail.year }}</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Reviews</h4>
+ <!-- #Loop -->
+
+<h6>Username</h6>
+<p>review n</p>
+
+<!--    user
+        bookid -->
+
+<hr>
+  <form action="{{ url_for('addreview') }}"> 
+  <div class="form-group">
+      <label>Enter Rating</label>
+      <input name="rate" class="form-control" placeholder="Rate btw 0 to 5" value={{ book.isbn }}>
+    </div>
+  <div class="form-group">
+    	<label for="exampleTextarea">Example textarea</label>
+    	<textarea name="review" class="form-control" id="exampleTextarea" rows="3"></textarea>
+  	</div>
+  	<button type="submit" class="btn btn-primary">Submit</button>
+  	</form>
+  	<hr>
+
+{% endblock %}

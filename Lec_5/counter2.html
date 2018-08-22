@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>counter1</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',function(){
+			document.querySelector('button').onclick = count;
+		});
+		
+		// document.addEventListener('DOMContentLoaded',function(){ //function body })
+		// this is function and the function parameter -> is another function
+		// DOM is loaded then do that do this
+
+		let counter = 0;
+		function count() {
+			counter++;
+			document.querySelector('#counter').innerHTML = counter;
+			if (counter === 10) {
+				alert(`The counter Value is ${counter}`)
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1 id='counter'>0</h1>
+	<button>Click Here</button>
+</body>
+</html>

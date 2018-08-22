@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taks 1</title>
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded',() => {
+
+			// Disable the submit by default
+			document.querySelector('#submit').disabled = true;
+
+			// Enable submit button if there any text are in the input box
+			document.querySelector('#task').onkeyup = () => {
+				document.querySelector('#submit').disabled = false;
+			};
+			// Get the value on submit of the form
+			document.querySelector('#new-task').onsubmit = () => {
+
+				const li = document.createElement('li');
+				
+				// Get the value from the form
+				li.innerHTML = document.querySelector('#task').value; //<li>value</li>
+
+				console.log(li.innerHTML)
+				// Append it on the id=tasks
+				document.querySelector('#tasks').append(li);
+
+				// Set the value to empty 
+				document.querySelector("#task").value = '';
+				document.querySelector('#submit').disabled = true;
+
+				// Get the rid off from reloading
+				return false;
+			};
+		});
+	</script>
+</head>
+<body>
+	<h1>Tasks</h1>
+	<ul id="tasks">
+	</ul>
+	<form id="new-task">
+		<input type="text" id="task">
+		<input id="submit" type="submit">
+	</form>
+</body>
+</html>
